@@ -9,6 +9,13 @@
   
 }
 
+@layer utilities {
+  .shadow-custom {
+    box-shadow: 0 10px 60px #262D7614;
+  }
+}
+
+
 @theme {
   --container-xs: 100%;
   --container-sm: 640px;
