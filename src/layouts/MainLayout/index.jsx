@@ -15,7 +15,9 @@ const MainLayout = () => {
         <Hero />
       </header>
       <Outlet />
+      <footer className="bg-[#D2E6E4] ">
       <Footer />
+      </footer>
     </>
   );
 };
