@@ -29,6 +29,23 @@ import BeautyImg2 from "../../assets/icons/beauty2.svg";
 import BeautyImg3 from "../../assets/icons/beauty3.svg";
 // @ts-ignore
 import BeautyImg4 from "../../assets/icons/beauty4.svg";
+// @ts-ignore
+import FeaturesImg1 from "../../assets/images/features1.svg";
+// @ts-ignore
+import FeaturesImg2 from "../../assets/images/features2.svg";
+// @ts-ignore
+import FeaturesCard1 from "../../assets/icons/features-card1.svg";
+// @ts-ignore
+import FeaturesCard2 from "../../assets/icons/features-card2.svg";
+// @ts-ignore
+import FeaturesCard3 from "../../assets/icons/features-card3.svg";
+// @ts-ignore
+import GiftCard from "../../assets/images/gift-card.svg";
+// @ts-ignore
+import Star from "../../assets/icons/star.svg";
+// @ts-ignore
+import DownVector from "../../assets/icons/down-vector.svg";
+
 
 const Home = () => {
     const [isHovered, setIsHovered] = useState(null); 
@@ -444,6 +461,80 @@ const Home = () => {
             </div>
 
           </div>
+        </section>
+        <section className="features mt-[110px]">
+            <div className="container features__wrapper flex justify-between gap-10">
+                <div className="features__info  flex flex-col ">
+                    <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main">Benefits</button>
+                    <h2 className="font-bold ml-[50px] mt-6 text-5xl text-main">Get Student ID card</h2>
+                    <div className="flex flex-col ">
+                        <div className="flex gap-3 items-center">
+                            <img src={FeaturesCard1} alt="" />
+                            <span className="text-[#696984] font-medium">Teachers don’t get lost in the grid view and have a dedicated Podium space.</span>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                            <img src={FeaturesCard2} alt="" />
+                            <span className="text-[#696984] font-medium">TA’s and presenters can be moved to the front of the class.</span>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                            <img src={FeaturesCard3} alt="" />
+                            <span className="text-[#696984] font-medium">Teachers can easily see all students and class data at one time.</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="features__img w-full h-full">
+                    <img className="w-full object-cover h-full" src={FeaturesImg1} alt="Student ID Image" />
+                </div>
+            </div>
+        </section>
+        <section className="features mt-[110px]">
+            <div className="container features__wrapper flex justify-between gap-10">
+                <div className="features__img ">
+                    <img className="w-full object-cover h-full" src={FeaturesImg2} alt="Student ID Image" />
+                </div>
+                <div className="features__info  flex flex-col ">
+                    <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main">Training</button>
+                    <h2 className="font-bold ml-[50px] mt-6 text-5xl text-primary">Staff training</h2>
+                    <div className="flex flex-col ">
+                        <div className="flex gap-3 items-center">
+                            <img src={FeaturesCard1} alt="" />
+                            <span className="text-[#696984] font-medium">Teachers don’t get lost in the grid view and have a dedicated Podium space.</span>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                            <img src={FeaturesCard2} alt="" />
+                            <span className="text-[#696984] font-medium">TA’s and presenters can be moved to the front of the class.</span>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                            <img src={FeaturesCard3} alt="" />
+                            <span className="text-[#696984] font-medium">Teachers can easily see all students and class data at one time.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="gift-card bg-[#DF1C25] mt-[141px]">
+            <div className="container relative gift-card__wrapper flex items-center justify-between  ">
+                <div className="gift-card__info pt-[50px] pb-[50px] flex flex-col justify-center items-center ">
+                    <h2 className="text-white font-bold text-5xl">Why You should buy gift cards ?</h2>
+                    <div className="flex gap-[9px] mt-7 items-center">
+                    <img src={Star} alt="Star" />
+                    <p className="text-white font-normal text-lg">Teachers don’t get lost in the grid view and have a dedicated Podium space.</p>
+                    </div>
+                    <div className="flex gap-[9px] mt-5 items-center">
+                    <img src={Star} alt="Star" />
+                    <p className="text-white font-normal text-lg">Teachers don’t get lost in the grid view and have a dedicated Podium space.</p>
+                    </div>
+                    <div className="flex gap-[9px] mt-5 items-center">
+                    <img src={Star} alt="Star" />
+                    <p className="text-white font-normal text-lg">Teachers don’t get lost in the grid view and have a dedicated Podium space.</p>
+                    </div>
+                    <button className="bg-white w-fit mr-auto text-main rounded-[10px] py-3 px-[62px] mt-10 hover:bg-primary hover:text-white transition-colors uppercase duration-[1000ms] ease-in-out">buy now</button>
+                </div>
+                <div className="gift-card__img">
+                    <img className="absolute right-[-35px] bottom-[0px]" src={GiftCard} alt="" />
+                </div>
+                <img className="absolute top-[150px] left-[100px] " src={DownVector} alt="vector line" />
+            </div>
         </section>
       </main>
     </>
