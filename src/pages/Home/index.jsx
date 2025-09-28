@@ -57,7 +57,7 @@ const Home = () => {
     <>
       <main className="main">
         <section className="courses mt-[150px]">
-          <div className="container courses__wrapper flex flex-col">
+          <div data-aos-delay="200" data-aos="fade-up" className="container  courses__wrapper flex flex-col">
             <div className="courses__info">
               <h2 className="courses__title  text-primary font-bold text-5xl text-center ">
                 Popular Courses
@@ -69,41 +69,43 @@ const Home = () => {
               </h2>
               <div className="courses__list flex items-center gap-6 justify-center mt-[40px]">
                 <button
-                  className={"bg-main rounded-[5px] py-2.5 px-5 text-white"}
+                  className={
+                    "bg-main rounded-[5px] py-2.5 px-5 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                  }
                 >
                   All Programme
                 </button>
                 <button
                   className={
-                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96]"
+                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96] transition-all duration-300 ease-in-out transform hover:bg-main hover:text-white hover:scale-105 hover:shadow-lg"
                   }
                 >
                   Ui/Ux Design
                 </button>
                 <button
                   className={
-                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96]"
+                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96] transition-all duration-300 ease-in-out transform hover:bg-main hover:text-white hover:scale-105 hover:shadow-lg"
                   }
                 >
                   Program Design
                 </button>
                 <button
                   className={
-                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96]"
+                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96] transition-all duration-300 ease-in-out transform hover:bg-main hover:text-white hover:scale-105 hover:shadow-lg"
                   }
                 >
                   Program Design
                 </button>
                 <button
                   className={
-                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96]"
+                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96] transition-all duration-300 ease-in-out transform hover:bg-main hover:text-white hover:scale-105 hover:shadow-lg"
                   }
                 >
                   Program Design
                 </button>
                 <button
                   className={
-                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96]"
+                    "bg-white border-[1px] border-solid border-[#C4C4C4] rounded-[5px] py-2.5 px-5 text-[#818C96] transition-all duration-300 ease-in-out transform hover:bg-main hover:text-white hover:scale-105 hover:shadow-lg"
                   }
                 >
                   Program Design
@@ -172,7 +174,9 @@ const Home = () => {
                     </p>
 
                     <button
-                      className={"bg-main rounded-[5px] py-2.5 px-5 text-white"}
+                      className={
+                        "bg-main rounded-[5px] py-2.5 px-5 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-primary hover:shadow-lg"
+                      }
                     >
                       Enroll Now
                     </button>
@@ -239,7 +243,9 @@ const Home = () => {
                     </p>
 
                     <button
-                      className={"bg-main rounded-[5px] py-2.5 px-5 text-white"}
+                      className={
+                        "bg-main rounded-[5px] py-2.5 px-5 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-primary hover:shadow-lg"
+                      }
                     >
                       Enroll Now
                     </button>
@@ -306,7 +312,9 @@ const Home = () => {
                     </p>
 
                     <button
-                      className={"bg-main rounded-[5px] py-2.5 px-5 text-white"}
+                      className={
+                        "bg-main rounded-[5px] py-2.5 px-5 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-primary hover:shadow-lg"
+                      }
                     >
                       Enroll Now
                     </button>
@@ -373,7 +381,9 @@ const Home = () => {
                     </p>
 
                     <button
-                      className={"bg-main rounded-[5px] py-2.5 px-5 text-white"}
+                      className={
+                        "bg-main rounded-[5px] py-2.5 px-5 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-primary hover:shadow-lg"
+                      }
                     >
                       Enroll Now
                     </button>
@@ -418,7 +428,7 @@ const Home = () => {
                   onMouseEnter={() => setIsHovered(4)}
                   onMouseLeave={() => setIsHovered(null)}
                   className=" mt-[38px] text-main rounded-[10px] border border-solid py-3 px-[62px]
-                    hover:bg-primary hover:text-white transition-colors duration-[1000ms] ease-in-out"
+                    hover:bg-primary hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
                 >
                   {isHovered === 4 ? "Explore Courses" : "more"}
                 </button>
@@ -439,7 +449,7 @@ const Home = () => {
                   onMouseEnter={() => setIsHovered(1)}
                   onMouseLeave={() => setIsHovered(null)}
                   className=" mt-[38px] text-main rounded-[10px] border border-solid py-3 px-[62px]
-                     hover:bg-primary hover:text-white transition-colors duration-[1000ms] ease-in-out"
+                     hover:bg-primary hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
                 >
                   {isHovered === 1 ? "Explore Courses" : "more"}
                 </button>
@@ -458,7 +468,7 @@ const Home = () => {
                   onMouseEnter={() => setIsHovered(2)}
                   onMouseLeave={() => setIsHovered(null)}
                   className=" mt-[38px] text-main rounded-[10px] border border-solid py-3 px-[62px]
-                     hover:bg-primary hover:text-white transition-colors duration-[1000ms] ease-in-out"
+                     hover:bg-primary hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
                 >
                   {isHovered === 2 ? "Explore Courses" : "more"}
                 </button>
@@ -477,7 +487,7 @@ const Home = () => {
                   onMouseEnter={() => setIsHovered(8)}
                   onMouseLeave={() => setIsHovered(null)}
                   className=" mt-[38px] text-main rounded-[10px] border border-solid py-3 px-[62px]
-                     hover:bg-primary hover:text-white transition-colors duration-[1000ms] ease-in-out"
+                     hover:bg-primary hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
                 >
                   {isHovered === 8 ? "Explore Courses" : "more"}
                 </button>
@@ -485,7 +495,7 @@ const Home = () => {
             </div>
 
             <div className="m-auto">
-              <button className=" py-3 px-[62px] rounded-[10px] bg-white text-main border border-main hover:text-white hover:bg-primary transition-colors duration-[1000ms] ease-in-out ">
+              <button className=" py-3 px-[62px] rounded-[10px] bg-white text-main border border-main hover:text-white hover:bg-primary transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg ">
                 view all
               </button>
             </div>
@@ -494,7 +504,7 @@ const Home = () => {
         <section className="features mt-[110px]">
           <div className="container features__wrapper flex justify-between gap-10">
             <div className="features__info  flex flex-col ">
-              <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main">
+              <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-main hover:text-white hover:shadow-lg">
                 Benefits
               </button>
               <h2 className="font-bold ml-[50px] mt-6 text-5xl text-main">
@@ -533,7 +543,7 @@ const Home = () => {
           </div>
         </section>
         <section className="features mt-[110px]">
-          <div className="container features__wrapper flex justify-between gap-10">
+          <div data-aos-delay="200" data-aos="fade-up" className="container features__wrapper flex justify-between gap-10">
             <div className="features__img ">
               <img
                 className="w-full object-cover h-full"
@@ -542,7 +552,7 @@ const Home = () => {
               />
             </div>
             <div className="features__info  flex flex-col ">
-              <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main">
+              <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-primary hover:text-white hover:shadow-lg">
                 Training
               </button>
               <h2 className="font-bold ml-[50px] mt-6 text-5xl text-primary">
@@ -600,7 +610,7 @@ const Home = () => {
                   Podium space.
                 </p>
               </div>
-              <button className="bg-white w-fit mr-auto text-main rounded-[10px] py-3 px-[62px] mt-10 hover:bg-primary hover:text-white transition-colors uppercase duration-[1000ms] ease-in-out">
+              <button className="bg-white w-fit mr-auto text-main rounded-[10px] py-3 px-[62px] mt-10 hover:bg-primary hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg uppercase">
                 buy now
               </button>
             </div>
