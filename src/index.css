@@ -9,6 +9,10 @@
   
 }
 
+button {
+  cursor: pointer;
+}
+
 @layer utilities {
   .shadow-custom {
     box-shadow: 0 10px 60px #262D7614;
