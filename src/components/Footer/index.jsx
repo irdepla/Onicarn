@@ -87,7 +87,7 @@ const Footer = () => {
         <div className="footer__email flex flex-col gap-5">
             <p className="font-normal">Stay up to date with the latest courses</p>
             <span className="relative">
-                <input placeholder="Email" className="rounded-[15px] py-[20px] px-[50px] bg-white " type="text" />
+                <input placeholder="Email" className="rounded-[15px] py-[20px] px-[50px] bg-white focus:outline-none " type="text" />
                 <button className="absolute bg-main focus:outline-none top-[5px] left-[180px] rounded-[20px] font-medium text-white py-3 px-[21px]">
                     Send
                 </button>

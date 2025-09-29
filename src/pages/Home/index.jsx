@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // @ts-ignore
 import CoursesVector from "../../assets/icons/courses-vector.svg";
 // @ts-ignore
@@ -50,14 +50,23 @@ import Carousel1 from "../../assets/images/carousel-card1.svg";
 // @ts-ignore
 import Carousel2 from "../../assets/images/carousel-card2.svg";
 import CardSlider from "../../components/Swiper";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { SwiperSlide } from "swiper/react";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000,});
+  }, []);
   const [isHovered, setIsHovered] = useState(null);
   return (
     <>
       <main className="main">
         <section className="courses mt-[150px]">
-          <div data-aos-delay="200" data-aos="fade-up" className="container  courses__wrapper flex flex-col">
+          <div
+            data-aos="fade-down"
+            className="container  courses__wrapper flex flex-col"
+          >
             <div className="courses__info">
               <h2 className="courses__title  text-primary font-bold text-5xl text-center ">
                 Popular Courses
@@ -411,7 +420,7 @@ const Home = () => {
               </span>
             </div>
 
-            <div className="category__cards grid grid-cols-4 items-center justify-center justify-items-center gap-10">
+            <div data-aos-anchor-placement="top-bottom" data-aos="fade-down" className="category__cards grid grid-cols-4 items-center justify-center justify-items-center gap-10">
               <div className="category__card  py-8 px-[15px]  rounded-[15px] flex flex-col justify-center items-center">
                 <div className="bg-main rounded-full">
                   <img className="p-2" src={BeautyImg} alt="Beauty Image" />
@@ -502,7 +511,7 @@ const Home = () => {
           </div>
         </section>
         <section className="features mt-[110px]">
-          <div className="container features__wrapper flex justify-between gap-10">
+          <div data-aos="fade-down" className="container features__wrapper flex justify-between gap-10">
             <div className="features__info  flex flex-col ">
               <button className="mr-auto bg-[#F5F5F5] py-2.5 px-[25px] text-main transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-main hover:text-white hover:shadow-lg">
                 Benefits
@@ -543,7 +552,11 @@ const Home = () => {
           </div>
         </section>
         <section className="features mt-[110px]">
-          <div data-aos-delay="200" data-aos="fade-up" className="container features__wrapper flex justify-between gap-10">
+          <div
+            data-aos-delay="200"
+            data-aos="fade-up"
+            className="container features__wrapper flex justify-between gap-10"
+          >
             <div className="features__img ">
               <img
                 className="w-full object-cover h-full"
@@ -616,6 +629,7 @@ const Home = () => {
             </div>
             <div className="gift-card__img">
               <img
+              data-aos="flip-left"
                 className="absolute right-[-35px] bottom-[0px]"
                 src={GiftCard}
                 alt=""
@@ -631,18 +645,20 @@ const Home = () => {
         <section className="bundle mt-[93px] mx-auto">
           <div className="container bundle__wrapper flex flex-col gap-[80px]">
             <div className="flex items-center justify-between gap-[127px]">
-              <div>
+              {/* <div>
                 <img src={Carousel1} alt="" />
-              </div>
+              </div> */}
 
-              <div className="flex w-[820px] h-[302px]  rounded-[20px] overflow-hidden shadow-lg bg-white">
-              <div className="flex relative items-center justify-center w-[40%]">
-                <img
-                  src={CourseCard4}
-                  alt="Python"
-                  className="w-[409px] h-full object-cover"
-                />
-                <div className="absolute p-[10px] bg-white rounded-[50px] top-[220px] right-[30px] ">
+              <CardSlider />
+
+              {/* <div className="flex w-[820px] h-[302px]  rounded-[20px] overflow-hidden shadow-lg bg-white">
+                <div className="flex relative items-center justify-center w-[40%]">
+                  <img
+                    src={CourseCard4}
+                    alt="Python"
+                    className="w-[409px] h-full object-cover"
+                  />
+                  <div className="absolute p-[10px] bg-white rounded-[50px] top-[220px] right-[30px] ">
                     <span className="text-primary font-bold text-2xl mr-2">
                       $380
                     </span>
@@ -650,52 +666,52 @@ const Home = () => {
                       $500
                     </span>
                   </div>
-              </div>
-              <div className="flex flex-col justify-between p-8 w-[60%]">
-                <div>
-                  <p className="text-xs text-gray-400 mb-2">1 - 28 July 2022</p>
-                  <h3 className="text-main font-bold text-2xl mb-2">
-                    Product Management Basic - Course
-                  </h3>
-                  <p className="text-gray-500 text-sm mb-4">
-                    Product Management Masterclass, you will learn with Sarah
-                    Johnson - Head of Product Customer Platform Gojek Indonesia.
-                  </p>
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
-
-                    <div className="flex -space-x-2">
-                      <img
-                        src={Blink1}
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
-                      <img
-                        src={Blink2}
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
-                      <img
-                        src={Blink3}
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
-                      <img
-                        src={Blink4}
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
-                      
+                <div className="flex flex-col justify-between p-8 w-[60%]">
+                  <div>
+                    <p className="text-xs text-gray-400 mb-2">
+                      1 - 28 July 2022
+                    </p>
+                    <h3 className="text-main font-bold text-2xl mb-2">
+                      Product Management Basic - Course
+                    </h3>
+                    <p className="text-gray-500 text-sm mb-4">
+                      Product Management Masterclass, you will learn with Sarah
+                      Johnson - Head of Product Customer Platform Gojek
+                      Indonesia.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                      <div className="flex -space-x-2">
+                        <img
+                          src={Blink1}
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                        <img
+                          src={Blink2}
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                        <img
+                          src={Blink3}
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                        <img
+                          src={Blink4}
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                      </div>
+                      <span className="ml-2 text-gray-600 font-medium">
+                        + 40 students
+                      </span>
                     </div>
-                    <span className="ml-2 text-gray-600 font-medium">
-                      + 40 students
-                    </span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </div> */}
 
-            <div>
-              <img src={Carousel2} alt="" />
-            </div>
-
+              {/* <div>
+                <img src={Carousel2} alt="" />
+              </div> */}
             </div>
           </div>
         </section>
